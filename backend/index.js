@@ -14,19 +14,25 @@ app.use(express.urlencoded({ extended: true }));
 
 // Connect to the database
 const connectDB = require("./configs/DB");
-connectDB();
+(async () => {
+  try {
+    await connectDB(); // Wait for the database to connect
 
-// Define user routes
-const userRoutes = require("./routes/userRoutes");
-app.use(express.json()); // Accept JSON data
-app.use("/api/user", userRoutes);
+    // Define user routes
+    const userRoutes = require("./routes/userRoutes");
+    app.use(express.json()); // Accept JSON data
+    app.use("/api/user", userRoutes);
 
-// Define a basic route
-app.get("/", (req, res) => {
-  res.json({ message: "API is running." });
-});
+    // Define a basic route
+    app.get("/", (req, res) => {
+      res.json({ message: "API is running." });
+    });
 
-// Start the server on the specified port
-app.listen(process.env.PORT, () => {
-  console.log("Server is running");
-});
+    // Start the server on the specified port
+    app.listen(process.env.PORT, () => {
+      console.log("Server is running");
+    });
+  } catch (error) {
+    console.error("Failed to connect to the database:", error);
+  }
+})();
