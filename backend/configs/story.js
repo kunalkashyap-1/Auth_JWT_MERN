@@ -1,7 +1,7 @@
 const storyPoints = [
   "Kunal Kashyap, a secret agent with a code name `Node Reactor`, uses his powers of full-stack development to solve complex problems.",
-  "His journey began at Guru Gobind Singh Indraprastha University, where he mastered the art of Computer Science and Engineering.",
-  "He further honed his skills at Ambedkar Institute of Technology, specializing in Digital Electronics.",
+  "His journey began at Ambedkar Institute of Technology, specializing in Digital Electronics.",
+  "He further honed his skills at Guru Gobind Singh Indraprastha University, where he mastered the art of Computer Science and Engineering.",
   "His first mission was at AVY Consulting LLP, where he successfully completed a project in full-stack web development.",
   "During the GirlScript Summer of Code, he enhanced API security and developed a highly-functional login and sign-up page component.",
   "He speaks multiple tech languages fluently, including C/C++, Java, JavaScript, Node.js, TypeScript, Python.",

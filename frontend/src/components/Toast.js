@@ -17,7 +17,7 @@ const Toast = () => {
   return (
     toast.isOpen && (
       <div
-        className={`fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded`}
+        className={`fixed bottom-4 left-4 bg-red-800 text-white p-2 rounded`}
       >
         <p>{toast.message}</p>
       </div>
