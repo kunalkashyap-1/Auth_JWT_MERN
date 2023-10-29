@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
       };
       // Send a POST request to the login endpoint
       const { data } = await axios.post(
-        "http://localhost:8383/api/user/login",
+        "https://backendauth-2xbx.onrender.com/api/user/login",
         { email, pswd:password },
         config
       );
@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
 
     axios
       .post(
-        "http://localhost:8383/api/user/register",
+        "https://backendauth-2xbx.onrender.com/api/user/register",
         {
           name,
           email,
@@ -90,7 +90,7 @@ export const AuthProvider = ({ children }) => {
       };
 
       const { data } = await axios.get(
-        `http://localhost:8383/api/user/protected`,
+        `https://backendauth-2xbx.onrender.com/api/user/protected`,
         config
       );
       setLoading(false);
