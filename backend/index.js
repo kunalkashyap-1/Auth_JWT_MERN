@@ -7,7 +7,7 @@ const app = express();
 
 // Enable Cross-Origin Resource Sharing (CORS)
 const cors = require("cors");
-app.use(cors({ origin: ["*"] }));
+app.use(cors());
 
 // Parse URL-encoded data
 app.use(express.urlencoded({ extended: true }));
